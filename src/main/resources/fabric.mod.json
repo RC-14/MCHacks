@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "hacks",
+  "version": "${version}",
+  "name": "Hacks",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/hacks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "rc14.hacks.client.HacksClient"
+    ],
+    "main": [
+      "rc14.hacks.Hacks"
+    ]
+  },
+  "mixins": [
+    "hacks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
