@@ -7,8 +7,8 @@ import rc14.hacks.events.game.TickCallback;
 import rc14.hacks.events.network.SendPlayerMoveC2SPacketCallback;
 
 public class FlyModule extends Module {
-	public FlyModule() {
-		super(true);
+	public FlyModule(boolean enabled) {
+		super(enabled);
 
 		SendPlayerMoveC2SPacketCallback.EVENT.register((packet) -> {
 			if (!packet.changesPosition()) return ActionResult.PASS;

@@ -5,8 +5,8 @@ import rc14.hacks.events.network.SendPlayerMoveC2SPacketCallback;
 import rc14.hacks.mixin.PlayerMoveC2SPacketAccessor;
 
 public class LeetMovementsModule extends Module {
-	public LeetMovementsModule() {
-		super(true);
+	public LeetMovementsModule(boolean enabled) {
+		super(enabled);
 
 		SendPlayerMoveC2SPacketCallback.EVENT.register((packet) -> {
 			if (!isEnabled() || !packet.changesPosition()) return ActionResult.PASS;

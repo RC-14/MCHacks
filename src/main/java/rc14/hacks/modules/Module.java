@@ -5,11 +5,12 @@ import net.minecraft.client.MinecraftClient;
 public abstract class Module {
 	protected final MinecraftClient client;
 
-	private boolean enabled;
+	private boolean enabled = false;
 
-	public Module(boolean defaultEnabled) {
-		this.enabled = defaultEnabled;
+	public Module(boolean enabled) {
 		this.client = MinecraftClient.getInstance();
+
+		if (enabled) enable();
 	}
 
 	public void enable() {

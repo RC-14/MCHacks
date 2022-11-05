@@ -5,9 +5,9 @@ import rc14.hacks.events.network.SendPlayerMoveC2SPacketCallback;
 import rc14.hacks.mixin.PlayerMoveC2SPacketAccessor;
 
 public class NoFallModule extends Module {
-	public NoFallModule() {
-		super(true);
-		
+	public NoFallModule(boolean enabled) {
+		super(enabled);
+
 		SendPlayerMoveC2SPacketCallback.EVENT.register((packet) -> {
 			if (client.player == null) return ActionResult.PASS;
 
