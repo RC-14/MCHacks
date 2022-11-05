@@ -24,6 +24,7 @@ public class Hacks implements ClientModInitializer {
 		INSTANCE = this;
 
 		modules.add(new NoFallModule());
+		modules.add(new FlyModule());
 		modules.add(new LeetMovementsModule());
 
 		LOGGER.info("Enabled modules: " + getEnabledModules());
