@@ -11,9 +11,6 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "rc14.hacks.client.HacksClient"
-    ],
-    "main": [
       "rc14.hacks.Hacks"
     ]
   },
