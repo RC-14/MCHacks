@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import rc14.hacks.events.game.TickCallback;
 
 @Mixin(MinecraftClient.class)
-public abstract class MinecraftClientMixin {
+public class MinecraftClientMixin {
 	@Inject(method = "tick()V", at = @At("TAIL"), cancellable = true)
 	private void invokeTickEvent(CallbackInfo ci) {
 		ActionResult result = TickCallback.EVENT.invoker().interact();
