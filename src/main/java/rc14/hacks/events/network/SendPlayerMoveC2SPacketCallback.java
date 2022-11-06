@@ -16,8 +16,7 @@ public interface SendPlayerMoveC2SPacketCallback {
 	 *     <li>FAIL cancels further processing and prevents sending the packet.</li>
 	 * </ul>
 	 */
-	Event<SendPlayerMoveC2SPacketCallback> EVENT = EventFactory.createArrayBacked(
-			SendPlayerMoveC2SPacketCallback.class,
+	Event<SendPlayerMoveC2SPacketCallback> EVENT = EventFactory.createArrayBacked(SendPlayerMoveC2SPacketCallback.class,
 			(listeners) -> (packet) -> {
 				for (SendPlayerMoveC2SPacketCallback listener : listeners) {
 					ActionResult result = listener.interact(packet);
@@ -26,8 +25,7 @@ public interface SendPlayerMoveC2SPacketCallback {
 				}
 
 				return ActionResult.PASS;
-			}
-	);
+			});
 
 	ActionResult interact(PlayerMoveC2SPacket packet);
 }
