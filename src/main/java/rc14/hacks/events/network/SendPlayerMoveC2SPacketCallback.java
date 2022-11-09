@@ -7,9 +7,9 @@ import net.minecraft.util.ActionResult;
 
 public interface SendPlayerMoveC2SPacketCallback {
 	/**
-	 * Called before a PlayerMoveC2SPacket gets send.
+	 * <p>Called before a PlayerMoveC2SPacket gets send.</p>
 	 * <p></p>
-	 * Upon return:
+	 * <p>Upon return:</p>
 	 * <ul>
 	 *     <li>SUCCESS cancels further processing and sends the packet.</li>
 	 *     <li>PASS falls back to further processing and defaults to SUCCESS if no other listeners are available.</li>

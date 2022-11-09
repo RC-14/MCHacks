@@ -6,9 +6,9 @@ import net.minecraft.util.ActionResult;
 
 public interface TickCallback {
 	/**
-	 * Called at the end of a tick.
-	 * <p>
-	 * Processing continues regardless of what is returned.
+	 * <p>Called at the end of a tick.</p>
+	 * <p></p>
+	 * <p>Processing continues regardless of what is returned.</p>
 	 */
 	Event<TickCallback> EVENT = EventFactory.createArrayBacked(TickCallback.class,
 			(listeners) -> () -> {

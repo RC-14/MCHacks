@@ -8,9 +8,9 @@ import net.minecraft.util.ActionResult;
 
 public interface SendPacketCallback {
 	/**
-	 * Called before a packet gets send and before the packet specific event is invoked.
+	 * <p>Called before a packet gets send and before the packet specific event is invoked.</p>
 	 * <p></p>
-	 * Upon return:
+	 * <p>Upon return:</p>
 	 * <ul>
 	 *     <li>SUCCESS cancels further processing and sends the packet.</li>
 	 *     <li>PASS falls back to further processing and defaults to SUCCESS if no other listeners are available.</li>
